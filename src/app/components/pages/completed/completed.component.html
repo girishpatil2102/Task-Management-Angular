@@ -1,0 +1,4 @@
+<div class="flex flex-col mt-6">
+    <h2 class="font-semibold text-xl">Completed Tasks:</h2>
+    <app-tasks-list [taskList]="taskList" (completed)="onCompleted($event)" (incomplete)="onIncomplete($event)" (important)="onImportant($event)" (unimportant)="onUnimportant($event)" (delete)="onDelete($event)"></app-tasks-list>
+</div>

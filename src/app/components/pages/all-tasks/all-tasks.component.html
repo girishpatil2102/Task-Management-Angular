@@ -1,0 +1,9 @@
+<div class="flex flex-col mt-7">
+    <input type="text" class="w-full h-16 px-4 py-2 rounded border border-blue-300 shadow-md" placeholder="Create New Task" [(ngModel)]="newTask"
+    (keydown.enter)="addTask()"
+    >
+</div>
+<div class="flex flex-col mt-6">
+    <h2 class="font-semibold text-xl">All Tasks:</h2>
+    <app-tasks-list [taskList]="taskList" (completed)="onCompleted($event)" (incomplete)="onIncomplete($event)" (important)="onImportant($event)" (unimportant)="onUnimportant($event)" (delete)="onDelete($event)"></app-tasks-list>
+</div>
